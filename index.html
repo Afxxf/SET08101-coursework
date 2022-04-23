@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Scottish Trivia Quiz</title>
+    <style media="screen">
+      body{
+        font-family: Tahoma, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .header img {
+        float: right;
+        width: 150px;
+        padding-right: 5%;
+      }
+      .header h1 {
+        position: relative;
+        top: 10px;
+        text-align:center;
+        border-style: solid;
+        margin-right: 30%;
+        margin-left: 30%;
+        padding: 15px 15px;
+        background-color: #a8c0d3;
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding-left: 44%;
+        overflow: hidden;
+        background-color: #041d3a;
+      }
+
+      li {
+        float: left;
+        margin-right: 50px;
+      }
+
+      li a {
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .info{
+        border-style: solid;
+        border-width: 2px;
+        margin-top: 10px;
+        margin-right: 20%;
+        margin-left: 20%;
+      }
+      .info h3, h4{
+        text-align: center;
+      }
+
+      .infoPhoto img{
+        display: block;
+        margin-left:44%;
+        height: 150px;
+        width: 150px;
+        padding-top: 10px;
+      }
+
+      .info p{
+        padding-left: 20px;
+        padding-right:20px;
+        text-align: center;
+      }
+      .form_input{
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 5%;
+      }
+      .form_input button{
+        margin-top: 40px;
+        padding: 30px 75px;
+        cursor: pointer;
+        border: 3px solid #a8c0d3;
+        background-color: white;
+        transition-duration: 0.7s;
+        border-radius: 50px;
+      }
+      button:hover {
+        background-color: #a8c0d3;
+        color: white;
+      }
+      footer{
+        margin-left: 45%;
+        position: fixed;
+        bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img src="Flag_of_Scotland.svg" alt="logo" />
+      <h1>Scottish Trivia Quiz</h1>
+    </div>
+    <div class="nav_bar">
+      <ul>
+        <li><a class="active">Home</a></li>
+        <li><a href="howToPlay.html">How to Play</a></li>
+      </ul>
+    </div>
+    <div class='info'>
+      <div class="infoPhoto">
+        <img src="Anonymous_map_of_scotland.png" alt="info" />
+        </div>
+        <h3>Fàilte - Welcome!</h3>
+        <h4><u>Quiz Info</u></h4>
+        <p>Welcome to my quiz! This quiz will give you the chance to learn more about the people that live in Scotland, the geography of the country, and the country's culture!<br>
+        For more info on how the game works, click on 'How to Play' above!<br>
+        <br>To get started, simply enter your name below and then click the button. <br><b>Good luck and have fun learning!</b><p>
+        <div class="form_input">
+          Name:
+          <input type="text" id="name" name="fname" required><br>
+          <button class="button button1" id='play'><b>PLAY!</b></button>
+        </div>
+    </div>
+    <script type="text/javascript" src='startGame.js'>
+    </script>
+    <footer>
+      <p>40485835 for SET08101<br></p>
+    </footer>
+  </body>
+</html>

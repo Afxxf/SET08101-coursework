@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Scottish Trivia Quiz - How to Play</title>
+  </head>
+  <style media="screen">
+    body{
+      font-family: Tahoma, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .header img {
+      float: right;
+      width: 150px;
+      padding-right: 5%;
+    }
+    .header h1 {
+      position: relative;
+      top: 10px;
+      text-align:center;
+      border-style: solid;
+      margin-right: 30%;
+      margin-left: 30%;
+      padding: 15px 15px;
+      background-color: #a8c0d3;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding-left: 44%;
+      overflow: hidden;
+      background-color: #041d3a;
+    }
+
+    li {
+      float: left;
+      margin-right: 50px;
+    }
+
+    li a {
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .form_input{
+      text-align: center;
+      padding-top: 20px;
+      margin-bottom: 10px;
+    }
+    .form_input button{
+      margin-top: 30px;
+      padding: 20px 35px;
+      cursor: pointer;
+      border: 3px solid #a8c0d3;
+      background-color: white;
+      transition-duration: 0.7s;
+    }
+    button:hover {
+      background-color: #a8c0d3;
+      color: white;
+    }
+    #howToPlay{
+      text-align:center;
+      padding-top: 20px;
+    }
+    #howToPlay p{
+      border: solid 1px;
+      margin-left: 30%;
+      margin-right: 30%;
+      padding: 3% 3%;
+    }
+    #howToPlay img{
+      border-radius: 50px;
+      width: 450px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+  <body>
+    <div class="header">
+      <img src="Flag_of_Scotland.svg" alt="logo" />
+      <h1>Scottish Trivia Quiz</h1>
+    </div>
+    <div class="nav_bar">
+      <ul>
+        <li><a href='index.html'>Home</a></li>
+        <li><a>How to Play</a></li>
+      </ul>
+    </div>
+    <div id='howToPlay'>
+      <h3>How to Play!</h3><br>
+      <p>Upon starting the game, you will be presented with the question and 4 possible answers to that question. Simply selection the option you think is correct and press submit to check if you are correct or not. To tally up are review all the questions you have answered, simply go to the bottom of the page and hit ‘Get results’. This will take you to the results page where you can view all of your questions and the correct answers. You can start the game from here by simply entering your name and clicking the button below. Have fun and I hope you learn more about Scotland!</p>
+    <div class="form_input">
+      Name:
+      <input type="text" id="name" name="fname" required><br>
+      <button class="button button1" id='play'><b>Get started!<b></button>
+    </div>
+    <script type="text/javascript" src='startGame.js'>
+    </script>
+    <img src='howToPlay.jpg' alt='Tobermory'>
+    </div>
+  </body>
+</html>

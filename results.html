@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Scottish Trivia Quiz - Results!</title>
+    <style media="screen">
+      body{
+        font-family: Tahoma, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .header img {
+        float: right;
+        width: 150px;
+        padding-right: 5%;
+      }
+
+      .header h1 {
+        position: relative;
+        top: 10px;
+        text-align:center;
+        border-style: solid;
+        margin-right: 30%;
+        margin-left: 30%;
+        padding: 15px 15px;
+        background-color: #a8c0d3;
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding-left: 44%;
+        overflow: hidden;
+        background-color: #041d3a;
+      }
+
+      li {
+        float: left;
+        margin-right: 5%;
+      }
+
+      li a {
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      #results img{
+        width: 60px;
+        height: 60px;
+        margin-top: 15px;
+        display:inline;
+        margin-right: 10%;
+        margin-left: 2%;
+      }
+      #quizSection{
+        font-size: 15px;
+        margin-left: 30px;
+        border: solid 1px;
+        margin-top: 30px;
+      }
+      #results{
+        margin-bottom: 20px;
+        margin-right: 5%;
+        margin-left: 5%;
+      }
+      button{
+        margin-bottom: 5px;
+        margin-top: 6px;
+        cursor: pointer;
+        border: 3px solid #a8c0d3;
+        background-color: white;
+        transition-duration: 0.7s;
+        border-radius: 25px;
+        margin-left: 52%;
+        padding: 5px 5px;
+      }
+      button:hover {
+        background-color: #a8c0d3;
+        color: white;
+      }
+      #correct{
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img src="Flag_of_Scotland.svg" alt="logo" />
+      <h1>Scottish Trivia Quiz</h1>
+    </div>
+    <div class="nav_bar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="howToPlay.html">How to Play</a></li>
+        <button type="button" id='restart'>RESTART GAME</button>
+      </ul>
+    </div>
+    <div id='intro'>
+    </div>
+    <div id='results'>
+    </div>
+    <script type="text/javascript" src='results.js'>
+    </script>
+  </body>
+</html>
