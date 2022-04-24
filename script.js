@@ -140,10 +140,8 @@ document.getElementById('restart').onclick = function(){
     }
 
     function allAnswersShow(questions, quiz, results){
-      // gather answer containers from our quiz
       var answerContainers = quiz.querySelectorAll('.answers');
       var correctAnswerIdList = []
-      // keep track of user's answers
       var userAnswer = '';
       var numCorrect = 0;
       //
@@ -152,11 +150,9 @@ document.getElementById('restart').onclick = function(){
         userAnswer = (answerContainers[id].querySelector('input[name=id' + id +']:checked')|| '').value;
         if(userAnswer===questions[id].correctAnswer){
           numCorrect = numCorrect + 1;
-          // store correctly answered questions
           correctAnswerIdList.push(questions[id].id)
         }
       }
-      results.innerHTML = numCorrect + ' out of ' + questions.length;
       sessionStorage.setItem('questionID', correctAnswerIdList);
       var seconds = document.getElementById('seconds').textContent;
       sessionStorage.setItem('seconds', seconds);
@@ -179,10 +175,8 @@ document.getElementById('restart').onclick = function(){
 
   function getSingleAnswer(questions, quiz, results, id){
     var answerContainers = quiz.querySelectorAll('.answers');
-    // keep track of user's answers
     var userAnswer = '';
     var numCorrect = 0;
-    // find selected answer
     userAnswer = (answerContainers[id].querySelector('input[name=id' + id +']:checked')|| '').value;
 
     if(userAnswer===questions[id].correctAnswer){
