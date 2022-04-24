@@ -107,12 +107,12 @@ for(var counter=0; counter<questions.length; counter++){
   // for each available answer...
   // add output
   document.getElementById('results').innerHTML += (
-    '<div id="quizSection" style="background-color: #a8c0d3">'+displayImage+'<p style="display:inline">Question '+(counter+1)+':  '
+    '<div id="quizSectionAnswers" style="background-color: #a8c0d3">'+displayImage+'<p style="display:inline">Question '+(counter+1)+':  '
     + questions[counter].question + '</p><p id = "correct" style="float: right;">Correct Answer: <b>'+questions[counter].answers[(questions[counter].correctAnswer)]+'</b></p></div>'
   );
   }
 
-document.getElementById('restart').onclick = function(){
+document.getElementById('restartGame').onclick = function(){
   sessionStorage.removeItem('minutes');
   sessionStorage.removeItem('seconds');
   sessionStorage.removeItem('questionID');
