@@ -174,10 +174,11 @@ document.getElementById('restart').onclick = function(){
     for (let id = 0; id < 8; id++) {
       // for every button add an onclick event to show single result
       document.getElementById(id).onclick = function(){
-        getSingleAnswer(questions, quiz, results, id)
+        getSingleAnswer(questions, quiz, results, id);
       }
     }
-
+  var correctAudio = document.getElementById('audio-correct')
+  var incorrectAudio = document.getElementById('audio-incorrect')
   function getSingleAnswer(questions, quiz, results, id){
     var answerContainers = quiz.querySelectorAll('.answers');
     var userAnswer = '';
@@ -190,13 +191,29 @@ document.getElementById('restart').onclick = function(){
       document.getElementById(id).style.color = 'green';
       document.getElementById(id).style.background = '#d0ece6';
       // play relevant sound
-      document.getElementById('audio-correct').play();
+      correctAudio.play();
     }
     else{
       // stlye accordingly
       document.getElementById(id).style.color = '';
       document.getElementById(id).style.background = '#be4f62';
       // play revelant sound
-      document.getElementById('audio-incorrect').play();
+      incorrectAudio.play();
       }
     }
+
+  var audioVolume = 1;
+  document.getElementById('increase').onclick = function(){
+    if (audioVolume != 1){
+    audioVolume = audioVolume + 0.2;
+    correctAudio.volume = audioVolume;
+    incorrectAudio.volume = audioVolume;
+    }
+  }
+  document.getElementById('decrease').onclick = function(){
+    if (audioVolume != 0){
+    audioVolume = audioVolume - 0.2;
+    correctAudio.volume = audioVolume;
+    incorrectAudio.volume = audioVolume;
+    }
+  }
