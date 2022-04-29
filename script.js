@@ -104,14 +104,12 @@ for(var counter=0; counter<questions.length; counter++){
 // initialise variables to hold elements
 var quiz = document.getElementById('quiz');
 var evaluate = document.getElementById('submit');
-var results = document.getElementById('results');
 
 // if the user decides to restart, refresh the page and set them at the top of the page
 document.getElementById('restart').onclick = function(){
   location.reload();
   scroll(0,0);
 }
-
 
     function display_questions(questions, quiz){
 
@@ -140,18 +138,16 @@ document.getElementById('restart').onclick = function(){
       }
     }
 
-    function allAnswersShow(questions, quiz, results){
+    function checkAllAnswers(questions, quiz){
       // initialise relevant variables
-      var answerContainers = quiz.querySelectorAll('.answers');
+      var answerSection = quiz.querySelectorAll('.answers');
       var correctAnswerIdList = []
-      var userAnswer = '';
-      var numCorrect = 0;
+      var selectedOption = '';
       // get submitted answers
       for(var id=0; id<questions.length; id++){
         // find selected answer
-        userAnswer = (answerContainers[id].querySelector('input[name=id' + id +']:checked')|| '').value;
-        if(userAnswer===questions[id].correctAnswer){
-          numCorrect = numCorrect + 1;
+        selectedOption = (answerSection[id].querySelector('input[name=id' + id +']:checked')|| '').value;
+        if(selectedOption===questions[id].correctAnswer){
           // if answer is correct add it to the list of correct answers for use on results page
           correctAnswerIdList.push(questions[id].id)
         }
@@ -169,24 +165,23 @@ document.getElementById('restart').onclick = function(){
     display_questions(questions, quiz);
     // on click of button, evalute all questions
     evaluate.onclick = function(){
-      allAnswersShow(questions, quiz, results);
+      checkAllAnswers(questions, quiz);
     }
     for (let id = 0; id < 8; id++) {
       // for every button add an onclick event to show single result
       document.getElementById(id).onclick = function(){
-        getSingleAnswer(questions, quiz, results, id);
+        getSingleAnswer(questions, quiz, id);
       }
     }
   var correctAudio = document.getElementById('audio-correct')
   var incorrectAudio = document.getElementById('audio-incorrect')
-  function getSingleAnswer(questions, quiz, results, id){
-    var answerContainers = quiz.querySelectorAll('.answers');
-    var userAnswer = '';
-    var numCorrect = 0;
+  function getSingleAnswer(questions, quiz, id){
+    var answerSection = quiz.querySelectorAll('.answers');
+    var selectedOption = '';
 
-    userAnswer = (answerContainers[id].querySelector('input[name=id' + id +']:checked')|| '').value;
+    selectedOption = (answerSection[id].querySelector('input[name=id' + id +']:checked')|| '').value;
 
-    if(userAnswer===questions[id].correctAnswer){
+    if(selectedOption===questions[id].correctAnswer){
       // style accordingly
       document.getElementById(id).style.color = 'green';
       document.getElementById(id).style.background = '#d0ece6';
